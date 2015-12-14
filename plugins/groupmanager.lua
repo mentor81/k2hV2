@@ -5,7 +5,7 @@ do
 local function create_group(msg)
     -- superuser and admins only (because sudo are always has privilege)
     if not is_admin(msg) then
-return " برای ساخت گروه انتی اسپم به گروه زیر رفته و سفارش دهید 🔽\nhttps://telegram.me/joinchat/B4ghtgIvpYna4yFu9JpmIQ "
+return " شما ادمین نیستید برای ارتباط با ادمین به ایدی زیر پیام دهید @mr_flat "
     end
     local group_creator = msg.from.print_name
     create_group_chat (group_creator, group_name, ok_cb, false)
@@ -301,12 +301,12 @@ end
 return {
   description = "Plugin to manage group chat.", 
   usage = {
-    "!creategroup <group_name> : Create a new group (admin only)",
-    "!setabout <description> : Set group description",
-    "!about : Read group description",
-    "!setrules <rules> : Set group rules",
-    "!rules : Read group rules",
-    "!setname <new_name> : Set group name",
+    "!creategroup <group_name> : ساخت گروه جدید",
+    "!setabout <description> : تنظیم توضیحات گروه",
+    "!about : مشاهده توضیحات گروه",
+    "!setrules <rules> : تنظیم قوانین گروه",
+    "!rules : مشاهده قوانین گروه",
+    "!setname <new_name> : تنظیم نام گروه",
     "!setphoto : Set group photo",
     "!group <lock|unlock> name : Lock/unlock group name",
     "!group <lock|unlock> photo : Lock/unlock group photo",
